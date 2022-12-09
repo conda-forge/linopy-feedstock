@@ -26,7 +26,7 @@ requirements:
     - bottleneck
     - toolz
     - numexpr
-    - xarray
+    - xarray >= 2022.9.0
     - dask-core >=0.18.0
     - tqdm
     - deprecation
