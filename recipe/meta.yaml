@@ -16,17 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <=3.10
+    - python >=3.8
     - pip
     - setuptools_scm
   run:
-    - python >=3.8, <=3.10
+    - python >=3.8
     - numpy
     - scipy
     - bottleneck
     - toolz
     - numexpr
-    - xarray <=2022.03.0
+    - xarray
     - dask-core >=0.18.0
     - tqdm
     - deprecation
