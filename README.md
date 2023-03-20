@@ -1,11 +1,11 @@
-About linopy
-============
+About linopy-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linopy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PyPSA/linopy
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linopy-feedstock/blob/main/LICENSE.txt)
 
 Summary: Linear optimization with N-D labeled arrays in Python
 
