@@ -1,5 +1,5 @@
 {% set name = "linopy" %}
-{% set version = "0.3" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
-  sha256: df7a914bfabd4cd81bef9d26d8f2d0a6327d2a0fb73709b2aec34cd2eb702f52
+  sha256: abc0e776878064eee2174afbc8900f679f902d8ff5c7037ef620280e44e8447f
 
 build:
   noarch: python
