@@ -5,9 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/linopy-feedstoc
 
 Home: https://github.com/PyPSA/linopy
 
-Package license: GPL-3.0-or-later
+Package license: MIT
 
 Summary: Linear optimization with N-D labeled arrays in Python
+
+Development: https://github.com/PyPSA/linopy
+
+Documentation: https://github.com/PyPSA/linopy/blob/master/README.md
 
 Current build status
 ====================
@@ -145,4 +149,5 @@ Feedstock Maintainers
 
 * [@fabianhofmann](https://github.com/fabianhofmann/)
 * [@fneum](https://github.com/fneum/)
+* [@xylar](https://github.com/xylar/)
 
