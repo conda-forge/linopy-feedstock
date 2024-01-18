@@ -11,22 +11,23 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
+    - setuptools >=45
+    - setuptools-scm >=6.2,<8
     - pip
-    - setuptools_scm
   run:
-    - python >=3.8
+    - python >=3.9
     - numpy
     - scipy
     - bottleneck
     - toolz
     - numexpr
-    - xarray >=2022.9.0
+    - xarray >=2023.1.0
     - dask-core >=0.18.0
     - tqdm
     - deprecation
@@ -42,8 +43,11 @@ test:
 about:
   home: https://github.com/PyPSA/linopy
   summary: Linear optimization with N-D labeled arrays in Python
-  license: GPL-3.0-or-later
+  license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
+  dev_url: https://github.com/PyPSA/linopy
+  doc_url: https://github.com/PyPSA/linopy/blob/master/README.md
 
 extra:
   recipe-maintainers:
