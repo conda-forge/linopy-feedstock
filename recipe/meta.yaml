@@ -1,5 +1,5 @@
 {% set name = "linopy" %}
-{% set version = "0.3.9" %}
+{% set version = "0.3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
-  sha256: fc5be549d2788d6ad03c44c71a6edf626070149177e790170a627400ffca3256
+  sha256: 73507da2d4efd4110731a00834a04f5077fb9c66f24f7a45e92654cef99af7cb
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm >=6.2,<8
     - pip
   run:
+    - polars
     - python >=3.9
     - numpy
     - scipy
