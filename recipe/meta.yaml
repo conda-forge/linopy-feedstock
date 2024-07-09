@@ -1,5 +1,5 @@
 {% set name = "linopy" %}
-{% set version = "0.3.11" %}
+{% set version = "0.3.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
-  sha256: 9d09fa31ca06ceae817bdf93191e6635c11fd4538c3b95f2b126423a4f3e7e13
+  sha256: aacc5868136818952bf3855f733b0384f94c13038f29420485d832e2089b4154
 
 build:
   noarch: python
@@ -22,12 +22,12 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - numpy
+    - numpy <2.0
     - scipy
     - bottleneck
     - toolz
     - numexpr
-    - xarray >=2023.9.0
+    - xarray >=2024.2.0
     - dask-core >=0.18.0
     - polars
     - tqdm
