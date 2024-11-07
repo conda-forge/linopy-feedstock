@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
   sha256: 690b4811391ce5809b76c48859c6be8f4ddf84f2742fad54438ff30d145d5c84
 
 build:
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=60
     - setuptools-scm >=8.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy <2.0
     - scipy
     - bottleneck
@@ -39,6 +39,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
