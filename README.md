@@ -149,5 +149,6 @@ Feedstock Maintainers
 
 * [@fabianhofmann](https://github.com/fabianhofmann/)
 * [@fneum](https://github.com/fneum/)
+* [@lkstrp](https://github.com/lkstrp/)
 * [@xylar](https://github.com/xylar/)
 
