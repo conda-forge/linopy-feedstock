@@ -22,6 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    # the stricter constraint on numpy for python 3.10
     - numpy <2.0
     - scipy
     - bottleneck
