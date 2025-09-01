@@ -1,5 +1,5 @@
 {% set name = "linopy" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
-  sha256: 2ce6897bd6618d863efb63f2a2710385d40a432b60b3e32bff0e7c699dbf3804
+  sha256: 406d75c97d4216e4328b3871d96eed75d278722576092016d7ec02c775708786
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    # the stricter constraint on numpy for python 3.10
     - numpy <2.0
     - scipy
     - bottleneck
