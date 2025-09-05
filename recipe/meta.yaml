@@ -1,5 +1,5 @@
 {% set name = "linopy" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
-  sha256: 406d75c97d4216e4328b3871d96eed75d278722576092016d7ec02c775708786
+  sha256: 7c8c913018478171a0ef8002abe121571fad73ca940ed2db450908d1881bb0df
 
 build:
   noarch: python
@@ -33,6 +33,8 @@ requirements:
     - polars
     - tqdm
     - deprecation
+    - google-cloud-storage
+    - requests
 
 test:
   imports:
