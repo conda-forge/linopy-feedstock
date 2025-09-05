@@ -21,8 +21,6 @@ requirements:
     - setuptools-scm >=8.0
     - pip
   run:
-    - google-cloud-storage
-    - requests
     - python >={{ python_min }}
     # the stricter constraint on numpy for python 3.10
     - numpy <2.0
@@ -35,6 +33,8 @@ requirements:
     - polars
     - tqdm
     - deprecation
+    - google-cloud-storage
+    - requests
 
 test:
   imports:
