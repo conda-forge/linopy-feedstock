@@ -1,5 +1,7 @@
 {% set name = "linopy" %}
 {% set version = "0.5.8" %}
+# override python >=3.11 so we can drop numpy <2 constraint
+{% set python_min "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     # the stricter constraint on numpy for python 3.10
-    - numpy <2.0
+    - numpy
     - scipy
     - bottleneck
     - toolz
