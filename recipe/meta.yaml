@@ -1,7 +1,7 @@
 {% set name = "linopy" %}
 {% set version = "0.5.8" %}
 # override python >=3.11 so we can drop numpy <2 constraint
-{% set python_min "3.11" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
