@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - python 3.11.*
+    - python ${{ python_min }}.*
     - setuptools >=60
     - setuptools-scm >=8.0
     - pip
@@ -46,8 +46,8 @@ tests:
       imports:
         - linopy
       pip_check: true
-
       python_version: ${{ python_min }}.*
+
 about:
   summary: Linear optimization with N-D labeled arrays in Python
   license: MIT
