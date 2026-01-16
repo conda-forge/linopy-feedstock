@@ -1,29 +1,32 @@
-{% set name = "linopy" %}
-{% set version = "0.5.8" %}
 # override python >=3.11 so we can drop numpy <2 constraint
-{% set python_min = "3.11" %}
+schema_version: 1
+
+context:
+  name: linopy
+  version: 0.5.8
+  python_min: 3.11
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/linopy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/linopy-${{ version }}.tar.gz
   sha256: a4dd6610544a279d0a2f7620b900a18b5173061cd902d5c20621c49576c5c271
 
 build:
+  number: 2
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.11.*
     - setuptools >=60
     - setuptools-scm >=8.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     # the stricter constraint on numpy for python 3.10
     - numpy
     - scipy
@@ -38,23 +41,20 @@ requirements:
     - google-cloud-storage
     - requests
 
-test:
-  imports:
-    - linopy
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}
-    - pip
+tests:
+  - python:
+      imports:
+        - linopy
+      pip_check: true
 
+      python_version: ${{ python_min }}.*
 about:
-  home: https://github.com/PyPSA/linopy
   summary: Linear optimization with N-D labeled arrays in Python
   license: MIT
-  license_family: MIT
   license_file: LICENSE.txt
-  dev_url: https://github.com/PyPSA/linopy
-  doc_url: https://github.com/PyPSA/linopy/blob/master/README.md
+  homepage: https://github.com/PyPSA/linopy
+  repository: https://github.com/PyPSA/linopy
+  documentation: https://github.com/PyPSA/linopy/blob/master/README.md
 
 extra:
   recipe-maintainers:
