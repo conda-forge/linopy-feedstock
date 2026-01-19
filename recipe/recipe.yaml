@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: linopy
-  version: 0.5.8
+  version: "0.6.0"
   python_min: 3.11
 
 package:
@@ -12,10 +12,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/linopy-${{ version }}.tar.gz
-  sha256: a4dd6610544a279d0a2f7620b900a18b5173061cd902d5c20621c49576c5c271
+  sha256: 32f0153f9ef30e528906de45687d15f31d522d00484c0b19903db6f2e58df02f
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
