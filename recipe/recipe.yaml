@@ -1,9 +1,9 @@
-# override python >=3.11 so we can drop numpy <2 constraint
 schema_version: 1
 
 context:
   name: linopy
-  version: "0.6.1"
+  version: 0.6.2
+  # override python >=3.11 so we can drop numpy <2 constraint
   python_min: 3.11
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/linopy-${{ version }}.tar.gz
-  sha256: d5a4d8ac167eaa1edd209c24526e0471451f12e2dfdfcf869865c95db4ececc5
+  sha256: 2347305a0d3d78a54e7df5012c659989ae766254a4046b4318607e1d009848a2
 
 build:
   number: 0
@@ -27,7 +27,6 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    # the stricter constraint on numpy for python 3.10
     - numpy
     - scipy
     - bottleneck
@@ -35,12 +34,12 @@ requirements:
     - numexpr
     - xarray >=2024.2.0
     - dask-core >=0.18.0
-    - polars
+    - polars >=1.31
     - tqdm
     - deprecation
+    - packaging
     - google-cloud-storage
     - requests
-
 tests:
   - python:
       imports:
