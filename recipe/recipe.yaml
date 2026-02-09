@@ -1,9 +1,9 @@
-# override python >=3.11 so we can drop numpy <2 constraint
 schema_version: 1
 
 context:
   name: linopy
   version: 0.6.2
+  # override python >=3.11 so we can drop numpy <2 constraint
   python_min: 3.11
 
 package:
@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - numpy <2
+    - numpy
     - scipy
     - bottleneck
     - toolz
@@ -37,9 +37,9 @@ requirements:
     - polars >=1.31
     - tqdm
     - deprecation
+    - packaging
     - google-cloud-storage
     - requests
-    - packaging
 tests:
   - python:
       imports:
