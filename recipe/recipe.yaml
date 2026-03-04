@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: linopy
-  version: "0.6.4"
+  version: "0.6.5"
   # override python >=3.11 so we can drop numpy <2 constraint
   python_min: 3.11
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/linopy-${{ version }}.tar.gz
-  sha256: 41c6ca38ab4239eb46f41737f339e6bdb7564a94870668fb25898bc3452f0368
+  sha256: f3045d0f0d6bdc909e362bda5a6f92dc917dcf0d9c18b0e67f82d698b91d45d1
 
 build:
   number: 1

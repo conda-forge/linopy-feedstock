@@ -152,6 +152,3 @@ Feedstock Maintainers
 * [@lkstrp](https://github.com/lkstrp/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-
