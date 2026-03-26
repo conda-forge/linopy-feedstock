@@ -4,7 +4,7 @@ context:
   name: linopy
   version: "0.6.6"
   # override python >=3.11 so we can drop numpy <2 constraint
-  python_min: 3.11
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
