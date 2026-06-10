@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: linopy
   version: "0.8.0"
-  # override python >=3.11 so we can drop numpy <2 constraint
   python_min: '3.11'
 
 package:
