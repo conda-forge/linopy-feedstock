@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: linopy
   version: "0.10.1"
-  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
